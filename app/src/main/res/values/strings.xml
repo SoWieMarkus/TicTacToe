@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">TicTacToe</string>
+    <string name="tictactoe_title" translatable="false">TicTacToe</string>
+    <string name="tictactoe_singleplayer">Singleplayer</string>
+    <string name="tictactoe_multiplayer">Multiplayer</string>
+    <string name="tictactoe_or">OR</string>
+    <string name="tictactoe_player1">Player 1</string>
+    <string name="tictactoe_player2">Player 2</string>
+    <string name="tictactoe_bot" translatable="false">Computer</string>
+    <string name="tictactoe_draw">Draw!</string>
+    <string name="tictactoe_wins">wins!</string>
+    <string name="tictactoe_play_again">Play again</string>
 </resources>

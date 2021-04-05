@@ -10,6 +10,8 @@ import markus.wieland.games.persistence.GameSaver;
 import markus.wieland.games.player.Player;
 import markus.wieland.games.screen.EndScreen;
 import markus.wieland.games.screen.StartScreen;
+import markus.wieland.games.screen.view.EndScreenView;
+import markus.wieland.games.screen.view.StartScreenView;
 import markus.wieland.tictactoe.ai.TicTacToeAI;
 
 public class MainActivity extends GameActivity<Highscore, TicTacToeGameState, TicTacToeGameResult, TicTacToe> {
@@ -19,18 +21,19 @@ public class MainActivity extends GameActivity<Highscore, TicTacToeGameState, Ti
     }
 
     @Override
-    protected StartScreen initializeStartScreen() {
-        return null;
+    protected StartScreenView initializeStartScreen() {
+        return findViewById(R.id.activity_tictactoe_start_screen);
     }
 
     @Override
-    protected EndScreen initializeEndScreen() {
-        return null;
+    protected EndScreenView initializeEndScreen() {
+        return findViewById(R.id.activity_tictactoe_end_screen);
     }
 
     @Override
     protected GameGenerator<TicTacToeGameState> initializeGenerator(GameConfiguration configuration) {
-        return new TicTacToeGenerator();
+        TicTacToeConfiguration ticTacToeConfiguration = (TicTacToeConfiguration) configuration;
+        return new TicTacToeGenerator(ticTacToeConfiguration);
     }
 
     @Override
@@ -41,17 +44,12 @@ public class MainActivity extends GameActivity<Highscore, TicTacToeGameState, Ti
     @Override
     protected void initializeGame(TicTacToeGameState gameState) {
         game = new TicTacToe(findViewById(R.id.background), gameState, this);
-        game.registerPlayer(new Player(null, 0, "Player 1"));
-        game.registerPlayer(new Player(new TicTacToeAI(1, Difficulty.EASY), 1, "Bot"));
+        game.start();
     }
 
     @Override
-    public void onGameStart() {
-
-    }
-
-    @Override
-    public void onGamePause() {
-
+    public void onGameFinish(TicTacToeGameResult gameResult) {
+        super.onGameFinish(gameResult);
+        game.enableGameBoard(false);
     }
 }

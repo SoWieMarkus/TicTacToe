@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="tictactoe_singleplayer">Einzelspieler</string>
+    <string name="tictactoe_multiplayer">Mehrspieler</string>
+    <string name="tictactoe_or">ODER</string>
+    <string name="tictactoe_player1">Spieler 1</string>
+    <string name="tictactoe_player2">Spieler 2</string>
+    <string name="tictactoe_draw">Unentschieden</string>
+    <string name="tictactoe_wins">gewinnt!</string>
+    <string name="tictactoe_play_again">Erneut spielen</string>
+</resources>

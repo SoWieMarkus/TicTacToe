@@ -18,15 +18,17 @@ public class TicTacToeAIMove extends GridGameAIMove {
         return grid[y][x] == GameBoardField.FREE;
     }
 
-
+    @Override
     protected long easyMove() {
         return random.nextInt(100);
     }
 
+    @Override
     protected long mediumMove() {
         return easyMove();
     }
 
+    @Override
     protected long hardMove() {
         return easyMove();
     }
