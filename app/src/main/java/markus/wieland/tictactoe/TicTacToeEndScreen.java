@@ -32,7 +32,7 @@ public class TicTacToeEndScreen extends EndScreenView implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        ((EndScreenInteractListener) screenInteractListener).onClose();
+        ((EndScreenInteractListener) screenInteractListener).onClose(false);
     }
 
 

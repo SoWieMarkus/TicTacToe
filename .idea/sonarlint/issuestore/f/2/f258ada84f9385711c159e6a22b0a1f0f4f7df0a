@@ -1,15 +1,0 @@
-
-^	java:S110"=This class has 10 parents which is greater than 5 authorized.(ÑÁÜ®ùÿÿÿÿ8Î‰Ä‰/
-£
-java:S11861"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(êåÔïıÿÿÿÿ8Î‰Ä‰/
-£
-java:S11866"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¸©½¶şÿÿÿÿ8Î‰Ä‰/
-j
-java:S1128"HRemove this unused import 'markus.wieland.games.game.GameEventListener'.(—ïÍèøÿÿÿÿ8…é“Ä‰/
-c
-java:S1128"ARemove this unused import 'markus.wieland.games.game.Difficulty'.(ÚÂ“êùÿÿÿÿ8¯Ş²Î‰/
-a
-java:S1128"DRemove this unused import 'markus.wieland.tictactoe.ai.TicTacToeAI'.(ëèÄç8¯Ş²Î‰/
-\
-java:S1128
-"?Remove this unused import 'markus.wieland.games.player.Player'.(®Î…Ø8¯Ş²Î‰/
