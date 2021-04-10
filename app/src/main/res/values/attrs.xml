@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="tictactoeGameBoardFieldBackgroundColor" format="color"/>
+    <attr name="tictactoeGameBoardFieldTextColor" format="color"/>
+    <attr name="tictactoeGameBoardGridColor" format="color"/>
+    <attr name="tictactoeMainBackground" format="color"/>
+
+</resources>

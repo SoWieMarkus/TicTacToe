@@ -1,20 +1,20 @@
 package markus.wieland.tictactoe;
 
+import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.view.WindowManager;
+
+import androidx.annotation.Nullable;
+
 import markus.wieland.games.GameActivity;
-import markus.wieland.games.game.Difficulty;
 import markus.wieland.games.game.GameConfiguration;
-import markus.wieland.games.game.GameEventListener;
 import markus.wieland.games.game.Highscore;
 import markus.wieland.games.persistence.GameGenerator;
 import markus.wieland.games.persistence.GameSaver;
-import markus.wieland.games.player.Player;
-import markus.wieland.games.screen.EndScreen;
-import markus.wieland.games.screen.StartScreen;
 import markus.wieland.games.screen.view.EndScreenView;
 import markus.wieland.games.screen.view.StartScreenView;
-import markus.wieland.tictactoe.ai.TicTacToeAI;
 
-public class MainActivity extends GameActivity<Highscore, TicTacToeGameState, TicTacToeGameResult, TicTacToe> {
+public class MainActivity extends GameActivity<TicTacToeConfiguration, Highscore, TicTacToeGameState, TicTacToeGameResult, TicTacToe> {
 
     public MainActivity() {
         super(R.layout.activity_main);
@@ -26,6 +26,12 @@ public class MainActivity extends GameActivity<Highscore, TicTacToeGameState, Ti
     }
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
     protected EndScreenView initializeEndScreen() {
         return findViewById(R.id.activity_tictactoe_end_screen);
     }
@@ -33,7 +39,7 @@ public class MainActivity extends GameActivity<Highscore, TicTacToeGameState, Ti
     @Override
     protected GameGenerator<TicTacToeGameState> initializeGenerator(GameConfiguration configuration) {
         TicTacToeConfiguration ticTacToeConfiguration = (TicTacToeConfiguration) configuration;
-        return new TicTacToeGenerator(ticTacToeConfiguration);
+        return new TicTacToeGenerator(ticTacToeConfiguration, this);
     }
 
     @Override
@@ -43,13 +49,8 @@ public class MainActivity extends GameActivity<Highscore, TicTacToeGameState, Ti
 
     @Override
     protected void initializeGame(TicTacToeGameState gameState) {
-        game = new TicTacToe(findViewById(R.id.background), gameState, this);
+        game = new TicTacToe(this, findViewById(R.id.activity_tictactoe_game_board), gameState);
         game.start();
     }
 
-    @Override
-    public void onGameFinish(TicTacToeGameResult gameResult) {
-        super.onGameFinish(gameResult);
-        game.enableGameBoard(false);
-    }
 }

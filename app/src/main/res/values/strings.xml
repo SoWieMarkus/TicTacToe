@@ -10,4 +10,5 @@
     <string name="tictactoe_draw">Draw!</string>
     <string name="tictactoe_wins">wins!</string>
     <string name="tictactoe_play_again">Play again</string>
+    <string name="tictactoe_back">Back to main menu</string>
 </resources>

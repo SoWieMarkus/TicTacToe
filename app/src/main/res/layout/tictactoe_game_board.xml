@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tictactoe_game_board_player_1_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tictactoe_game_board_player_1_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="24sp"
+                            app:fontFamily="sans-serif-thin" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#aaa"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tictactoe_game_board_player_2_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tictactoe_game_board_player_2_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="24sp"
+                            app:fontFamily="sans-serif-thin" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="?attr/tictactoeGameBoardGridColor"
+                    android:elevation="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+
+                    <markus.wieland.tictactoe.TicTacToeGameBoardFieldView
+                        android:id="@+id/button00"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="?attr/tictactoeGameBoardFieldBackgroundColor"
+                        android:textColor="?attr/tictactoeGameBoardFieldTextColor"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toTopOf="@+id/button10"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/button01"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <markus.wieland.tictactoe.TicTacToeGameBoardFieldView
+                        android:id="@+id/button01"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+
+                        android:layout_marginBottom="1dp"
+                        android:background="?attr/tictactoeGameBoardFieldBackgroundColor"
+                        android:textColor="?attr/tictactoeGameBoardFieldTextColor"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toTopOf="@+id/button11"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/button02"
+                        app:layout_constraintStart_toEndOf="@+id/button00"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <markus.wieland.tictactoe.TicTacToeGameBoardFieldView
+                        android:id="@+id/button20"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginRight="1dp"
+                        android:background="?attr/tictactoeGameBoardFieldBackgroundColor"
+                        android:textColor="?attr/tictactoeGameBoardFieldTextColor"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/button21"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+                    <markus.wieland.tictactoe.TicTacToeGameBoardFieldView
+                        android:id="@+id/button22"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:background="?attr/tictactoeGameBoardFieldBackgroundColor"
+                        android:textColor="?attr/tictactoeGameBoardFieldTextColor"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/button21"
+                        app:layout_constraintTop_toBottomOf="@+id/button12" />
+
+                    <markus.wieland.tictactoe.TicTacToeGameBoardFieldView
+                        android:id="@+id/button21"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="1dp"
+                        android:background="?attr/tictactoeGameBoardFieldBackgroundColor"
+                        android:textColor="?attr/tictactoeGameBoardFieldTextColor"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/button22"
+                        app:layout_constraintStart_toEndOf="@+id/button20"
+                        app:layout_constraintTop_toBottomOf="@+id/button11" />
+
+                    <markus.wieland.tictactoe.TicTacToeGameBoardFieldView
+                        android:id="@+id/button12"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="?attr/tictactoeGameBoardFieldBackgroundColor"
+                        android:textColor="?attr/tictactoeGameBoardFieldTextColor"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toTopOf="@+id/button22"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/button11"
+                        app:layout_constraintTop_toBottomOf="@+id/button02" />
+
+                    <markus.wieland.tictactoe.TicTacToeGameBoardFieldView
+                        android:id="@+id/button11"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="?attr/tictactoeGameBoardFieldBackgroundColor"
+                        android:textColor="?attr/tictactoeGameBoardFieldTextColor"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toTopOf="@+id/button21"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/button12"
+                        app:layout_constraintStart_toEndOf="@+id/button10"
+                        app:layout_constraintTop_toBottomOf="@+id/button01" />
+
+                    <markus.wieland.tictactoe.TicTacToeGameBoardFieldView
+                        android:id="@+id/button10"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginRight="1dp"
+                        android:background="?attr/tictactoeGameBoardFieldBackgroundColor"
+                        android:textColor="?attr/tictactoeGameBoardFieldTextColor"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toTopOf="@+id/button20"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/button11"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/button00" />
+
+                    <markus.wieland.tictactoe.TicTacToeGameBoardFieldView
+                        android:id="@+id/button02"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="?attr/tictactoeGameBoardFieldBackgroundColor"
+                        android:textColor="?attr/tictactoeGameBoardFieldTextColor"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toTopOf="@+id/button12"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/button01"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

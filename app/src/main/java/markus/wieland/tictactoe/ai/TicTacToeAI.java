@@ -6,19 +6,23 @@ import markus.wieland.games.game.Difficulty;
 import markus.wieland.games.persistence.GameState;
 import markus.wieland.tictactoe.TicTacToeGameState;
 
+
 public class TicTacToeAI extends GridGameAI {
 
-    public TicTacToeAI(int player, Difficulty difficulty) {
+    private final int opponent;
+
+    public TicTacToeAI(int player, int opponent, Difficulty difficulty) {
         super(new HighValueMoveRater(), player, difficulty);
+        this.opponent = opponent;
     }
 
     @Override
-    protected int[][] getCurrentGameState(GameState ticTacToeGameState) {
-        return ((TicTacToeGameState) ticTacToeGameState).convert();
+    protected int[][] getCurrentGameState(GameState gameState) {
+        return ((TicTacToeGameState) gameState).convert();
     }
 
     @Override
     protected TicTacToeAIMove buildMove(int x, int y, int[][] grid) {
-        return new TicTacToeAIMove(x, y, grid, difficulty, lines, player);
+        return new TicTacToeAIMove(x, y, grid, difficulty, player, opponent);
     }
 }

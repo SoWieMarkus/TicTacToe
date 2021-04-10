@@ -15,7 +15,7 @@ public class TicTacToeGameResult implements GameResult {
         return winner;
     }
 
-    public boolean hasWinner(){
+    public boolean hasWinner() {
         return winner != null;
     }
 }
