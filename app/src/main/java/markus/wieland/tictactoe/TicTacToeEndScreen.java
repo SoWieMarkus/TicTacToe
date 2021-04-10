@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import markus.wieland.games.screen.interact_listener.EndScreenInteractListener;
 import markus.wieland.games.screen.view.EndScreenView;
@@ -16,7 +15,6 @@ import markus.wieland.games.screen.view.EndScreenView;
 public class TicTacToeEndScreen extends EndScreenView implements View.OnClickListener {
 
     private TextView tvGameResultMessage;
-    private ConstraintLayout background;
 
     public TicTacToeEndScreen(@NonNull Context context) {
         super(context);
@@ -34,7 +32,6 @@ public class TicTacToeEndScreen extends EndScreenView implements View.OnClickLis
     public void onClick(View v) {
         ((EndScreenInteractListener) screenInteractListener).onClose(false);
     }
-
 
     @Override
     protected void onNewGameResult() {
