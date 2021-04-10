@@ -11,6 +11,7 @@ import markus.wieland.games.player.Player;
 import markus.wieland.games.player.PlayerManager;
 import markus.wieland.tictactoe.ai.TicTacToeAI;
 
+
 public class TicTacToeGenerator extends GameGenerator<TicTacToeGameState> {
 
     private final Context context;

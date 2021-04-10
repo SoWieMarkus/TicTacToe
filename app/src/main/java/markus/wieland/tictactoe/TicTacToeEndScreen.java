@@ -2,7 +2,6 @@ package markus.wieland.tictactoe;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,7 +27,6 @@ public class TicTacToeEndScreen extends EndScreenView {
         super(context, attrs, defStyleAttr);
     }
 
-    @Override
     protected void onNewGameResult() {
         if (gameResult == null) return;
         if (!(gameResult instanceof TicTacToeGameResult)) throw new IllegalArgumentException();
