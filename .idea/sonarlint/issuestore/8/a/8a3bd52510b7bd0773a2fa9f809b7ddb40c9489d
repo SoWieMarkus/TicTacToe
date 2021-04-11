@@ -1,4 +1,5 @@
 
-p
-java:S1128
-"NRemove this unused import 'androidx.constraintlayout.widget.ConstraintLayout'.(¨‘úÿÿÿÿ8±šÓà‹/
+w
+java:S19056"URemove this unnecessary cast to "org.sonar.java.resolve.Symbols$UnknownType@b989b55".(íËØˆıÿÿÿÿ8İ¾ùä‹/
+w
+java:S19057"URemove this unnecessary cast to "org.sonar.java.resolve.Symbols$UnknownType@b989b55".(ÅßŸıÿÿÿÿ8İ¾ùä‹/

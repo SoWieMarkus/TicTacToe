@@ -48,7 +48,7 @@ public class TicTacToeAIMove extends GridGameAIMove {
 
         int amountTwoInARowOfOpponent = PatternMatcher.getInstance().getAmountOfMatchingPatterns(2, opponent, lines);
 
-        return win * 100000 + (long) (amountTwoInARow - (2*amountTwoInARowOfOpponent)) * 100;
+        return win * 100000 + (long) (amountTwoInARow - (2 * amountTwoInARowOfOpponent)) * 100;
     }
 
     @Override

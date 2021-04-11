@@ -7,8 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import markus.wieland.games.screen.view.StartScreenView;
-import markus.wieland.tictactoe.R;
-import markus.wieland.tictactoe.TicTacToeConfiguration;
 
 public class TicTacToeStartScreen extends StartScreenView {
 

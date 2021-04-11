@@ -11,13 +11,10 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-import markus.wieland.games.ai.pattern.PatternMatcher;
-import markus.wieland.games.ai.pattern.PatternMatchingLine;
 import markus.wieland.games.elements.Coordinate;
 import markus.wieland.games.elements.Line;
 import markus.wieland.games.elements.Matrix;
 import markus.wieland.games.elements.SerializableMatrix;
-import markus.wieland.games.game.Difficulty;
 import markus.wieland.games.game.grid.GridGameBoardView;
 import markus.wieland.games.persistence.GameState;
 import markus.wieland.games.player.Player;
@@ -97,13 +94,13 @@ public class TicTacToeGameBoardView extends GridGameBoardView<TicTacToeGameBoard
         textViewPlayer1Name = findViewById(R.id.tictactoe_game_board_player_1_name);
     }
 
-    public void showLines(){
+    public void showLines() {
         Thread thread = new Thread() {
             @Override
             public void run() {
-                try{
+                try {
 
-                    for (Line line: lines) {
+                    for (Line line : lines) {
                         for (TicTacToeGameBoardFieldView view : matrix) {
                             view.setBackgroundColor(Color.parseColor("#ffffff"));
                         }
@@ -113,7 +110,7 @@ public class TicTacToeGameBoardView extends GridGameBoardView<TicTacToeGameBoard
                         sleep(1000);
                     }
 
-                } catch (Exception e)  {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -168,6 +165,7 @@ public class TicTacToeGameBoardView extends GridGameBoardView<TicTacToeGameBoard
         }
     }
 
+    @Override
     public List<Line> getLines() {
         return lines;
     }

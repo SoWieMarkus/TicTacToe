@@ -16,7 +16,7 @@ public class TicTacToeGameBoardFieldView extends androidx.appcompat.widget.AppCo
     private Coordinate coordinate;
     private int value;
 
-    public static final char[] SYMBOLS = new char[]{' ', 'X', 'O'};
+    protected static final char[] SYMBOLS = new char[]{' ', 'X', 'O'};
 
     public static final int PLAYER_1 = 0;
     public static final int PLAYER_2 = 1;

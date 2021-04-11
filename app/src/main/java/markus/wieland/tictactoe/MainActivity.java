@@ -1,10 +1,7 @@
 package markus.wieland.tictactoe;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.WindowManager;
-
-import androidx.annotation.Nullable;
 
 import markus.wieland.games.GameActivity;
 import markus.wieland.games.game.GameConfiguration;
